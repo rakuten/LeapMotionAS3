@@ -77,9 +77,10 @@ Features
 + Clean, lightweight and documented code
 + Same structure as official API
 + Gestures (Circle, Key Tap, Screen Tap, Swipe)
++ Skeleton API
 + Works great with [Away3D](https://github.com/away3d/away3d-core-fp11) and [Starling](https://github.com/PrimaryFeather/Starling-Framework)
 + Connect multiple devices to the same Leap Motion (via an optional "host" argument)
-+ Uses AIR 3.9/ASC 2.0 compiler features (add the `-inline` and `-swf-version=22` compiler arguments)
++ Uses AIR 13.0/ASC 2.0 compiler features (add the `-inline` and `-swf-version=24` compiler arguments)
 + No external dependencies, creates a optimized socket when the ANE isn't available
 + AIR Native Extension (ANE) which directly interfaces with the C++ library (Mac OSX and Windows)
 + Compatible with Mac OSX, Windows, iOS (iPad/iPhone/etc) and Android
@@ -127,7 +128,7 @@ If you are using the ANE on Windows, you need to add the Leap Motion program fol
 Documentation
 -----------
 
-[API documentation](http://logotype.se/leapmotion/docs/)
+[API documentation](http://logotype.github.io/LeapMotionAS3Docs/index.html)
 
 To generate documentation, simply run `ant docs` from the build/ directory.
 
@@ -150,7 +151,7 @@ Authors
 Copyright and license
 ---------------------
 
-Copyright © 2013 logotype
+Copyright © 2014 logotype
 
 Author: Victor Norgren
 
@@ -170,3 +171,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE. 
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0b1150a1c194ee9a45645c857cf4f861 "githalytics.com")](http://githalytics.com/logotype/LeapMotionAS3)

@@ -21,6 +21,10 @@ package com.leapmotion.leap
 		 */
 		private var context:Object;
 		
+		static public const DEVICE_PERIPHERAL:int = 1;
+		static public const DEVICE_KEYBOARD:int = 0;
+		static public const DEVICE_LAPTOP:int = 0;
+		
 		/**
 		 * Constructs a Device object.
 		 * 
@@ -125,6 +129,28 @@ package com.leapmotion.leap
 		public function range():Number
 		{
 			return context.call( "getDeviceRange" );
+		}
+		
+		/**
+		 * Reports the device is embedded instead of an external peripheral.
+		 * 
+		 * @since 1.2
+		 */    
+		public function isEmbedded():Boolean
+		{
+			return context.call( "getDeviceIsEmbedded" );
+		}
+		
+		/**
+		 * The device's streaming state. All listed Devices are implied to be physically attached,
+		 * and if this is true they are currently streaming data. Currently we only support one
+		 * streaming device at a time.
+		 * 
+		 * @since 1.2
+		 */
+		public function isStreaming():Boolean
+		{
+			return context.call( "getDeviceIsStreaming" );
 		}
 		
 		/**

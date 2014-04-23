@@ -79,6 +79,32 @@ package com.leapmotion.leap
 		public var timeVisible:Number;
 		
 		/**
+		 * How confident we are with a given hand pose.
+		 *     
+		 * The confidence level ranges between 0.0 and 1.0 inclusive.
+		 * @since 2.0
+		 */
+		public var confidence:Number;
+
+		/**
+		 * Identifies whether this Hand is a left hand.
+		 *
+		 * @return True if the hand is identified as a left hand.
+		 * 
+		 * @since 1.f
+		 */
+		public var isLeft:Boolean;
+		
+		/**
+		 * Identifies whether this Hand is a right hand.
+		 *
+		 * @return True if the hand is identified as a right hand.
+		 * 
+		 * @since 1.f
+		 */
+		public var isRight:Boolean;
+		
+		/**
 		 * The rate of change of the palm position in millimeters/second.
 		 */
 		public var palmVelocity:Vector3;
@@ -104,10 +130,38 @@ package com.leapmotion.leap
 		 * The center of a sphere fit to the curvature of this hand.
 		 */
 		public var sphereCenter:Vector3;
+
 		/**
 		 * The radius of a sphere fit to the curvature of this hand.
 		 */
 		public var sphereRadius:Number;
+		
+		/**
+		 * The holding strength of a pinch hand pose.
+		 *
+		 * <p>The strength is zero for an open hand, and blends to 1.0 when a pinching
+		 * hand pose is recognized. Pinching can be done between the thumb
+		 * and any other finger of the same hand.</p>
+		 *
+		 * @return A float value in the [0..1] range representing the holding strength
+		 * of the pinch pose.
+		 * 
+		 * @since 1.f
+		 */
+		public var pinchStrength:Number;
+		
+		/**
+		 * The strength of a grab hand pose.
+		 *
+		 * <p>The strength is zero for an open hand, and blends to 1.0 when a grabbing hand
+		 * pose is recognized.</p>
+		 *
+		 * @return A float value in the [0..1] range representing the holding strength
+		 * of the pose.
+		 * 
+		 * @since 1.f
+		 */
+		public var grabStrength:Number;
 
 		/**
 		 * @private
